@@ -1,104 +1,22 @@
+.mainContainer {
+  display: grid;
+  justify-content: center;
+  width: 100vw;
+}
+
+.headerContainer {
+  height: 10vh;
+  padding: 1em 0;
+  font-size: 2.5em;
+  justify-self: center;
+  align-content: center;
+}
+
 .calendarContainer {
-  background: #fff;
-  width: 450px;
-  border-radius: 10px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.calendarContainer header {
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1vw;
+  justify-content: center;
   align-items: center;
-  padding: 25px 30px 10px;
-  justify-content: space-between;
-}
-
-header .calendarNavigation {
-  display: flex;
-}
-
-header .calendarNavigation span {
-  height: 38px;
-  width: 38px;
-  margin: 0 1px;
-  cursor: pointer;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 50%;
-  user-select: none;
-  color: #aeabab;
-  font-size: 1.9rem;
-}
-
-.calendarNavigation span:last-child {
-  margin-right: -10px;
-}
-
-header .calendarNavigation span:hover {
-  background: #f2f2f2;
-}
-
-header .calendarCurrentDate {
-  font-weight: 500;
-  font-size: 1.45rem;
-}
-
-.calendarBody {
-  padding: 20px;
-}
-
-.calendarBody ul {
-  list-style: none;
-  flex-wrap: wrap;
-  display: flex;
-  text-align: center;
-}
-
-.calendarBody .calendarDates {
-  margin-bottom: 20px;
-}
-
-.calendarBody li {
-  width: calc(100% / 7);
-  font-size: 1.07rem;
-  color: #414141;
-}
-
-.calendarBody .calendarWeekdays li {
-  cursor: default;
-  font-weight: 500;
-}
-
-.calendarBody .calendarDates li {
-  margin-top: 30px;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.calendarDates li.inactive {
-  color: #aaa;
-}
-
-.calendarDates li.active {
-  color: #fff;
-}
-
-.calendarDates li::before {
-  position: absolute;
-  content: '';
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.calendarDates li.active::before {
-  background: #6332c5;
-}
-
-.calendarDates li:not(.active):hover::before {
-  background: #e4e1e1;
 }

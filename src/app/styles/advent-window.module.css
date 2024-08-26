@@ -1,0 +1,54 @@
+.adventWindowSection {
+  width: 15vw;
+  height: 20vh;
+}
+
+.adventWindowImg {
+  width: 15vw;
+  height: 20vh;
+  border: 0.2em solid turquoise;
+}
+
+.adventWindowCard {
+  background-color: transparent;
+  width: 15vw;
+  height: inherit;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.adventWindowInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.adventWindowFront {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: turquoise;
+  color: black;
+}
+
+.adventWindowBack {
+  background-color: turquoise;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.adventWindowCard:hover .adventWindowInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.adventWindowFront,
+.adventWindowBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
