@@ -1,17 +1,17 @@
 .adventWindowSection {
-  width: 15vw;
-  height: 20vh;
+  width: var(--window-width);
+  height: var(--window-height);
 }
 
 .adventWindowImg {
-  width: 15vw;
-  height: 20vh;
+  width: var(--window-width);
+  height: var(--window-height);
   border: 0.2em solid turquoise;
 }
 
 .adventWindowCard {
   background-color: transparent;
-  width: 15vw;
+  width: var(--window-width);
   height: inherit;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }

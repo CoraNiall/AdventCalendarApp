@@ -3,7 +3,7 @@ import styles from '@/app/styles/advent-window.module.css';
 
 export default function AdventWindow({ image }) {
   return (
-    <section className={styles.adventWindowSection}>
+    <section id={image.id} className={styles.adventWindowSection}>
       <div className={styles.adventWindowCard}>
         <div className={styles.adventWindowInner}>
           <div className={styles.adventWindowFront}>

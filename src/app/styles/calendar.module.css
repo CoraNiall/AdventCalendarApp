@@ -12,11 +12,27 @@
   align-content: center;
 }
 
-.calendarContainer {
+.adventCalendar {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(6, 1fr);
   gap: 1vw;
   justify-content: center;
   align-items: center;
+}
+
+.button {
+  display: flex;
+  background-color: white;
+  border: 5px solid whitesmoke;
+  align-items: center;
+  justify-content: center;
+  width: var(--button-width);
+  height: var(--button-height);
+  transition: transform 300ms ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  border: 5px solid rgb(223, 220, 220);
 }
