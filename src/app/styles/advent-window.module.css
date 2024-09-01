@@ -40,8 +40,16 @@
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.adventWindowCard:hover .adventWindowInner {
+.adventWindowCard .adventWindowInnerFlip {
   transform: rotateY(180deg);
+}
+
+.adventWindowCard .adventWindowInnerFlip .adventWindowCardHeader {
+  display: none;
+}
+
+.adventWindowCard .adventWindowInnerFlip .adventWindowBack {
+  backface-visibility: visible;
 }
 
 /* Position the front and back side */
